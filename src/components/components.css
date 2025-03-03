@@ -69,7 +69,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: calc(100% - 64px);
 
     padding: 64px 32px;
     gap: 10px;
@@ -93,6 +93,40 @@ button {
 
 .card:hover {
     transition: 0.2s;
-    background: none;
+    background: var(--web-light);
     border: 4px solid var(--web-secondary-light);
+}
+
+.static {
+    border: 0;
+    background-color: var(--web-light);
+}
+
+.static:hover {
+    border: none;
+}
+
+.block {
+    width: content-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 32px;
+    gap: 32px;
+    border-radius: 50px;
+
+    background-color: var(--web-secondary-light);
+    transition: 0.2s;
+}
+
+.block:hover {
+    background-color: var(--web-secondary-dark);
+}
+
+.block:hover .h1 {
+    color: var(--web-secondary-light)
+}
+
+.block:hover .h4 {
+    color: var(--web-secondary-light);
 }

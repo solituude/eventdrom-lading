@@ -137,6 +137,14 @@ body{
     color: var(--web-primary);
 }
 
+.right {
+    text-align: right;
+}
+
+.dark {
+    color: var(--web-dark)
+}
+
 li {
     font-family: Commissioner， sans-serif !important;
     font-weight: 400;
@@ -203,11 +211,47 @@ li {
 }
 
 .quickStart__section {
-    height: 660px;
+    margin-top: 64px;
+    padding: 0 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
-.modules__section {
-    height: 924px;
+
+
+.modules {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.modules__header {
+    display: flex;
+    height: 236px;
+    position: relative;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.modules__h1 {
+    margin-left: 300px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 64px;
+    flex-wrap: wrap;
+    background-color: var(--web-primary);
+    gap: 32px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
 }
 
 .advantages__section {

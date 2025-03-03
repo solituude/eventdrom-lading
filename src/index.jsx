@@ -1,9 +1,11 @@
 import { hydrate, prerender as ssr } from 'preact-iso';
 import logoIcon from './assets/logo.svg';
 import calendar from './assets/calendar.svg';
+import modulesIcon from './assets/modules.svg';
 import './style.css';
 import {Button} from "./components/button.jsx";
 import {Card} from "./components/card.jsx";
+import {Block} from "./components/block.jsx";
 
 export function App() {
 
@@ -84,11 +86,29 @@ export function App() {
 				</section>
 
 				<section id="quick-start" className="quickStart__section">
-					quick start
+					<h1 className={"h1 right dark"}>БЫСТРЫЙ СТАРТ</h1>
+					<Block number={"01"} text={"Регистрируйтесь на платформе"} />
+					<Block number={"02"} text={"Выбирайте формат и настраивайте приложение"} />
+					<Block number={"03"} text={"Публикуйте в два клика и управляйте мероприятием в реальном времени"} />
 				</section>
 
-				<section id='modules' className="modules__section">
-					modules
+				<section id='modules' className="modules">
+					<img className="calendar__img" src={modulesIcon} />
+					<div className="modules__header">
+						<h1 className="h1 dark modules__h1">МОДУЛИ</h1>
+					</div>
+
+					<div className="cards">
+						<div className="row">
+							<Card text={"ИИ-брендинг: генерация персонального оформления"} isStatic />
+							<Card text={"Онлайн-регистрация и пуш-уведомления"} isStatic />
+						</div>
+						<div className="row">
+							<Card text={"Геймификация и вовлечение участников"} isStatic />
+							<Card text={"Спонсорские интеграции и аналитика"} isStatic />
+						</div>
+						<Button label={"попробовать в конструкторе"} type={'to-main'} size={'large'} />
+					</div>
 				</section>
 
 				<section id='advantages' className="advantages__section">
