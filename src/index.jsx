@@ -2,13 +2,13 @@ import { hydrate, prerender as ssr } from 'preact-iso';
 import logoIcon from './assets/logo.svg';
 import calendar from './assets/calendar.svg';
 import modulesIcon from './assets/modules.svg';
+import advantagesIcon from './assets/advantages.svg';
 import './style.css';
 import {Button} from "./components/button.jsx";
 import {Card} from "./components/card.jsx";
 import {Block} from "./components/block.jsx";
 
 export function App() {
-
 	return (
 		<>
 			<header className="header">
@@ -40,7 +40,7 @@ export function App() {
 						<span className="hero__span">Площадка для взлёта вашего мероприятия!</span>
 					</div>
 
-					<Button label={'Попробовать в конструкторе'} size={'large'}
+					<Button label={'ПОПРОБОВАТЬ В КОНСТРУКТОРЕ'} size={'large'}
 							type={'to-main'} />
 
 					<div className="concept">
@@ -107,12 +107,30 @@ export function App() {
 							<Card text={"Геймификация и вовлечение участников"} isStatic />
 							<Card text={"Спонсорские интеграции и аналитика"} isStatic />
 						</div>
-						<Button label={"попробовать в конструкторе"} type={'to-main'} size={'large'} />
+						<Button label={"ПОПРОБОВАТЬ В КОНСТРУКТОРЕ"} type={'to-main'} size={'large'} />
 					</div>
 				</section>
 
-				<section id='advantages' className="advantages__section">
-					advantages
+				<section id='advantages' className="advantages">
+					<h1 className="h1">НАШИ ПРИЕМУЩЕСТВА</h1>
+					<div className="card__container">
+						<div className="advantages__card">
+							<h3 className="h3">СКОРОСТЬ</h3>
+							<span className="text">Готовое приложение за 30 минут</span>
+							<span className="text">Быстрая настройка повторных событий</span>
+						</div>
+						<div className="advantages__card">
+							<h3 className="h3">ЭКОНОМИЯ</h3>
+							<span className="text">Оплата только нужных функций</span>
+							<span className="text">Дешевле заказной разработки</span>
+						</div>
+						<div className="advantages__card">
+							<h3 className="h3">ПРЕСТИЖ</h3>
+							<span className="text">ИИ-брендинг</span>
+							<span className="text">Уникальный стиль</span>
+						</div>
+					</div>
+					<img src={advantagesIcon} alt={'звездочка'} className="advantages__img"/>
 				</section>
 
 				<section id='contact-us' className="contactUs__section">

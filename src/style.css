@@ -6,6 +6,26 @@ body{
     margin: 0;
 }
 
+.h3 {
+    margin: 0;
+    font-family: Commissioner, sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48.92px;
+    letter-spacing: -5%;
+
+    color: var(--web-dark);
+}
+
+.text {
+    font-family: Commissioner, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -5%;
+    text-wrap: nowrap;
+    color: var(--web-dark);
+}
 
 :root {
     --web-dark: #151515;
@@ -254,8 +274,37 @@ li {
     gap: 32px;
 }
 
-.advantages__section {
-    height: 374px;
+.advantages{
+    margin-top: 64px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 64px;
+}
+
+.card__container {
+    display: flex;
+    /*width: 100%;*/
+    flex-direction: row;
+    gap: 32px;
+}
+
+.advantages__card {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    gap: 24px;
+    width: 100%;
+    border-radius: 50px;
+    background-color: var(--web-secondary-light);
+}
+
+.advantages__img {
+    position: absolute;
+    width: 300px;
+    right: 0;
+    top: 286px;
 }
 
 .contactUs__section {

@@ -65,6 +65,18 @@ button {
     transition: 0.2s;
 }
 
+path.small {
+    stroke: var(--web-light);
+}
+
+path.large {
+    stroke: var(--web-light);
+}
+
+.button:hover path.large {
+    stroke: var(--web-dark);
+}
+
 .card {
     display: flex;
     flex-direction: column;

@@ -1,5 +1,5 @@
 import './components.css';
-import rightArrow from '../assets/tabler-icon-arrow-narrow-right.svg';
+
 export const Button = ({size, label, type}) => {
 
     const handleClick = () => {
@@ -9,11 +9,16 @@ export const Button = ({size, label, type}) => {
 
         }
     }
+    const sizeNumber = size === 'small' ? 24 : 48;
 
     return(
         <button onClick={handleClick} className={`button ${size}`}>
             <span className={`button__label ${size}`}>{label}</span>
-            <img src={rightArrow} alt={'right-arrow'} width={size === 'small' ? 24 : 48} />
+            <svg width={sizeNumber} height={sizeNumber} viewBox={`0 0 48 49`} fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 24.5H38M38 24.5L30 32.5M38 24.5L30 16.5"
+                      className={size} stroke-width="4" stroke-linecap="round"
+                      stroke-linejoin="round"/>
+            </svg>
         </button>
     )
 }
